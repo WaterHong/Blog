@@ -1,26 +1,3 @@
-
-#### HTTP/1、HTTP/2、HTTP/3
-HTTP1.0:
-HTTP1.1:缓存处理、增加了错误码(409等)、默认开启长连接
-HTTP/2传输数据量的大幅减少,主要有两个原因:以二进制方式传输和Header 压缩。HTTP/2 将请求和响应数据分割为更小的帧，并且它们采用二进制编码。多个帧之间可以乱序发送，根据帧首部的流标识可以重新组装。
-
-[HTTP/2的头部压缩机制、首部表，多路复用的重组，HTTP/2的丢包情况，HTTP/3基于QUIC](https://blog.csdn.net/howgod/article/details/102597450)
-
-总结：
-HTTP/1.1有两个主要的缺点：安全不足和性能不高。
-
-HTTP/2完全兼容HTTP/1，是“更安全的HTTP、更快的HTTPS"，头部压缩、多路复用等技术可以充分利用带宽，降低延迟，从而大幅度提高上网体验；
-
-QUIC 基于 UDP 实现，是 HTTP/3 中的底层支撑协议，该协议基于 UDP，又取了 TCP 中的精华，实现了即快又可靠的协议。
-
-
-#### HTTPS
-内容加密、数字证书,TLS
-
-[参考](https://blog.csdn.net/user11223344abc/article/details/83658812)
-[加密的改良](https://www.cnblogs.com/sxiszero/p/11133747.html)
-
----
 #### 状态码
 
 成功：2xx（成功200）

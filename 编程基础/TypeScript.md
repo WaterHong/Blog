@@ -1,4 +1,5 @@
 #### TypeScript的优点
+- 静态类型检查，ide提示友好，文档
 - 在编译时提过错误检查功能
 - 有助于代码结构
 
@@ -60,7 +61,8 @@ Number/String/Boolean/Null/Void/Undefined
 - 定义两个相同名称的接口会合并声明，定义两个同名的type会出现异常。
 - type可以使用typeof获取实例类型
     ```javascript 
-    let div = document.createElement('div');type B = typeof div
+    let div = document.createElement('div');
+    type B = typeof div;
     ```
 
 #### any 和 unknow
