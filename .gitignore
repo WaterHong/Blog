@@ -107,3 +107,6 @@ buildServer
 # TernJS port file
 .tern-port
 /streamed-federation/.s3rver/
+
+# plan
+计划书.md
