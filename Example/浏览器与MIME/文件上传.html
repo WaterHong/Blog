@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test upload</title>
+    </head>
+    <body>
+        <div>
+            <input id="file" type="file" />
+            <input type="button" value="文件上传" onclick="uploadFile()" />
+        </div>
+        <script>
+            function uploadFile() {
+                const file = document.getElementById('file').files[0];
+                const fd = new FormData();
+                fd.append('file', file);
+
+                console.log(fd);
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://127.0.0.1:8000/upload', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText);
+                    }
+                };
+                xhr.send(file);
+            }
+        </script>
+    </body>
+</html>
